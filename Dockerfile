@@ -11,7 +11,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends socat ca-certif
 WORKDIR /app
 COPY --from=build /app/echo_server ./echo_server
 COPY static ./static
-COPY media ./media
-RUN mkdir -p data
+RUN mkdir -p data media
 ENV INTERNAL_PORT=8000
 CMD ["sh","-c","PORT=$INTERNAL_PORT ./echo_server & sleep 1; exec socat TCP-LISTEN:${PORT:-10000},fork,reuseaddr,bind=0.0.0.0 TCP:127.0.0.1:$INTERNAL_PORT"]
