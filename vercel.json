@@ -1,7 +1,6 @@
 {
-  "outputDirectory": "static",
   "rewrites": [
-    { "source": "/api/:path*", "destination": "https://YOUR-RENDER-SERVICE.onrender.com/api/:path*" },
-    { "source": "/media/:path*", "destination": "https://YOUR-RENDER-SERVICE.onrender.com/media/:path*" }
+    { "source": "/api/:path*", "destination": "https://echo-music-2.onrender.com/api/:path*" },
+    { "source": "/media/:path*", "destination": "https://echo-music-2.onrender.com/media/:path*" }
   ]
 }
